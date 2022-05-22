@@ -7,7 +7,9 @@ import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login/Login';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 import Signup from './Pages/Login/Signup/Signup';
+import { ToastContainer } from 'react-toastify';
 
+  import 'react-toastify/dist/ReactToastify.css';
 
 import Navbar from './Pages/Shared/Navbar/Navbar';
 
@@ -25,6 +27,7 @@ function App() {
           <Appointment></Appointment>
         </RequireAuth>}></Route>
       </Routes>
+      <ToastContainer />
     </div>
   );
 }
