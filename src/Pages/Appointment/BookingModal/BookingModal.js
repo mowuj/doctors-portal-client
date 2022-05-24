@@ -20,7 +20,7 @@ const BookingModal = ({date, treatment,setTreatment ,refetch}) => {
       patientName: user.displayName,
       phone:event.target.phone.value
     }
-    fetch('http://localhost:5000/booking', {
+    fetch('https://whispering-river-73719.herokuapp.com/booking', {
       method: 'POST',
       headers: {
         'content-type':'application/json'
