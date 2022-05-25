@@ -41,7 +41,29 @@ const Signup = () => {
   <div className="card-body">
     <h2 className="text-center text-2xl font-bold">SIGN UP</h2>
     <form onSubmit={handleSubmit(onSubmit)}>
-                        
+
+    <div className="form-control w-full max-w-xs">
+  <label className="label">
+    <span className="label-text">Name</span>
+    
+  </label>
+  <input
+        type="text" 
+        placeholder="Your Name" 
+        className="input input-bordered w-full max-w-xs" 
+            {...register("name", {
+                required: {
+                    value: true,
+                    message:"Name is Required"
+            }
+  })}/>
+    <label className="label">
+        {errors.name?.type === 'required' && <span className="label-text-alt text-red-500">{errors.name.message}</span>}
+        
+
+
+  </label>
+</div>              
 <div className="form-control w-full max-w-xs">
   <label className="label">
     <span className="label-text">Email</span>
@@ -68,28 +90,7 @@ const Signup = () => {
 
   </label>
     </div>
-    <div className="form-control w-full max-w-xs">
-  <label className="label">
-    <span className="label-text">Name</span>
-    
-  </label>
-  <input
-        type="text" 
-        placeholder="Your Name" 
-        className="input input-bordered w-full max-w-xs" 
-            {...register("name", {
-                required: {
-                    value: true,
-                    message:"Name is Required"
-            }
-  })}/>
-    <label className="label">
-        {errors.name?.type === 'required' && <span className="label-text-alt text-red-500">{errors.name.message}</span>}
-        
 
-
-  </label>
-</div>
 <div className="form-control w-full max-w-xs">
   <label className="label">
     <span className="label-text">Password</span>
