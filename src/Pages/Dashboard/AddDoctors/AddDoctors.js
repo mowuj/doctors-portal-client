@@ -14,7 +14,7 @@ const AddDoctors = () => {
    * YUP:to validate file:Search:YUP file validation for react hook form
    */
     const { register, formState: { errors }, handleSubmit,reset } = useForm();
-    const {data:services,isLoading}=useQuery('services',()=>fetch('http://localhost:5000/service').then(res=>res.json()))
+    const {data:services,isLoading}=useQuery('services',()=>fetch('https://whispering-river-73719.herokuapp.comservice').then(res=>res.json()))
 
   const imageStorageKey = '57d910e362621157f7a4fff266d13647';
 
@@ -38,7 +38,7 @@ const AddDoctors = () => {
               img:img
             }
             //send to your database
-            fetch('http://localhost:5000/doctor', {
+            fetch('https://whispering-river-73719.herokuapp.comdoctor', {
               method: 'POST',
               headers: {
                 'content-type': 'application/json',

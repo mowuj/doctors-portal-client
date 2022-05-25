@@ -9,7 +9,7 @@ import CheckoutForm from '../CheckoutForm/CheckoutForm';
 const stripePromise = loadStripe('pk_test_51L3HzCFICgNuMVET4lm1alcn4VyaJfMWJm0ke7akqFag2hi9hvzX0ZHIYGh48uaHZh5f2T4dUVyA44XHPcBVwelS006dwqyc2O');
 const Payment = () => {
     const { id } = useParams();
-    const url=`http://localhost:5000/booking/${id}`
+    const url=`https://whispering-river-73719.herokuapp.combooking/${id}`
     const { data:appointment,isLoading } = useQuery(['booking', id], () => fetch(url, {
         method: 'GET',
             headers: {
