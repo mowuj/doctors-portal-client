@@ -7,6 +7,7 @@ import auth from '../../../firebase.init';
 const MyAppointment = () => {
     const [appointments, setAppointments] = useState([])
   const [user] = useAuthState(auth);
+  console.log(user);
   const navigate = useNavigate();
     useEffect(() => {
         if (user) {
